@@ -1,0 +1,37 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput placeholder="Write your name" [(ngModel)]="signUpDto.nombre" name="nombre">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Apellidos</mat-label>
+    <input matInput placeholder="Write your surname" [(ngModel)]="signUpDto.apellidos" name="apellidos">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nick</mat-label>
+      <input matInput placeholder="Write your nick" [(ngModel)]="signUpDto.nick" name="username">
+    </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Write your email" [(ngModel)]="signUpDto.email" name="email">
+    </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Fecha Nacimiento</mat-label>
+      <input matInput placeholder="Write your fechaNacimiento" [(ngModel)]="signUpDto.fechaNacimiento" name="fechaNacimiento">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Write your password" [(ngModel)]="signUpDto.password" name="password">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Repit Password</mat-label>
+      <input matInput placeholder="Write your password" [(ngModel)]="signUpDto.password2" name="password2">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Privacidad</mat-label>
+      <input matInput placeholder="Write your privacity" [(ngModel)]="signUpDto.rol" name="privacity">
+    </mat-form-field>
+    <input type="file" [(ngModel)]="signUpDto.file" name="avatar" class="input-file"
+      (change)="onFileSelected($event)">
+    <button mat-raised-button color="primary" (click)="doSignUp(password2)">Register</button>
+</form>
